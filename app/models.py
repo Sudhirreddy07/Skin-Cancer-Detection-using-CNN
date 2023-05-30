@@ -1,0 +1,25 @@
+from django.db import models
+from django.utils import timezone
+# Create your models here.
+class Recordresult(models.Model):
+    firstname=models.CharField(max_length=50)
+    lastName=models.CharField(max_length=50)
+    username=models.CharField(max_length=50)
+    age=models.SmallIntegerField()
+    gender=models.CharField(max_length=10)    
+    contact=models.BigIntegerField(max_length=10)
+    mail=models.EmailField(max_length=10)
+    symp1=models.CharField(max_length=10)
+    symp2=models.CharField(max_length=10)
+    symp3=models.CharField(max_length=10)
+    symp4=models.CharField(max_length=10)
+    symp5=models.CharField(max_length=10)
+    symp6=models.CharField(max_length=10)
+    symp7=models.CharField(max_length=10)
+    symp8=models.CharField(max_length=10)
+    suggestion=models.CharField(max_length=250,null=True)
+    is_check=models.CharField(max_length=50)
+    drcheck=models.BooleanField(default=True)
+    Image=models.ImageField(upload_to="image/")
+    Predicteddegree=models.CharField(max_length=50)
+    Dateandtime=models.DateField(default=timezone.now)
